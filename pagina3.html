@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pagina3.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>CSS</h1>
-    
+    <h1 class="vermelho">CSS</h1>
+
     <p>O CSS documento de estilização em cascata criado em 1993, com sua versão amplamente utilizada em 
         1996. A linguagem CSS permite definir regras que definem características para os elementos HTML,
         como cor, borda e comportamentos, além de animações e transições. </p>
@@ -22,5 +23,30 @@
             de posicionamento como display:flex (2008) e grid (2013). </li>
     </ol>
 
+    <div>
+        <p>Uma regra CSS pode ser definida com a seguinte sintaxe</p>
+
+        <pre>
+            seletor{
+                Propriedade1: Valor;
+                Propriedade2: Valor;
+            }
+        </pre>
+
+        <p id="tituloformascss">Podemos incluir código CSS de 3 formas diferentes</p>
+        <dl>
+            <dt>CSS externo</dt>
+            <dd>Quando definimos as regras CSS a serem utilizadas por meio de um arquivo externo .css,
+                vinculando ele ao html por meio da tag &lt; link &gt; no head do documento html.</dd>
+
+            <dt>CSS incorporado "no documento" </dt>
+            <dd>Quando definimos as regras CSS por meio da tag &lt; style; &gt; </dd>
+
+            <dt>CSS inline</dt>
+            <dd>Quando definimos código CSS de estilização no próprio elemento HTML como: <span
+                style="color: red;"> Texto de cor vermelha com CSS inline</span></dd>
+
+        </dl>
+    </div>
 </body>
 </html>
