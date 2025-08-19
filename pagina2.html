@@ -83,8 +83,9 @@
 
         <div>
             <h2>Formularios</h2>
+            <form action="">
             <label for="nomeUsuario">Nome</label>
-            <input id = "nomeUsuario" type="text"> <br>
+            <input id = "nomeUsuario" type="text" placeholder="Digite seu nome"> <br>
 
             <label for="cor">cor</label>
             <input id="cor" type="color"> <br>
@@ -98,13 +99,21 @@
             <label for="endereco">Endereço</label>
             <input id="endereco" type="text"><br>
 
-            <textarea name="oi" id="observacoes" rows="4">Escreva observações...</textarea>
+            <textarea name="oi" id="observacoes" rows="4"  placeholder="Observações"></textarea>
 
             <br>
-            
-            <button>Pronto</button>
-
+            <input type="button" value="Pronto">
+            </form>
+ 
+            <form action="https://www.google.com/search"
+            method="GET">
+                <h2>busca</h2>
+                <label for="key">Entre com termo</label>
+                <input type="text" id="key" name="q">
+                <button>buscar</button>
+            </form>
         </div>
 
+        <a href="pagina3.html">Página 3</a>
     </body>
 </html>
