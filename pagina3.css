@@ -5,3 +5,11 @@
 .vermelho{
     color: red;
 }
+
+.titulo{
+    color: #369b63;
+}
+
+[for = "nome"], [type = "submit"]{
+    color: blueviolet;
+}
