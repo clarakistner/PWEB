@@ -7,7 +7,7 @@
 </head>
 <style>
      *{
-        margin: 0%;
+        margin: 0;
         padding: 0;
     }
     body.html{
@@ -18,18 +18,22 @@
         height: 25vh;
         background-color: aqua;
         position: fixed;
-        left: 0px;
-        bottom: 0px;
-        animation: subir 1s none 0s infinite;
+        left: 0vh;
+        bottom: 0vh;
+        animation: subir 1s none 0s infinite ;
+        
     }
 
-    @keyframes subir {
-        0%{
 
+    @keyframes subir {
+        50%{
+            top: 0vh; left: 100vh;
+        }
+        75%{
+            top: 0vh; right: 100vh ;
         }
         100%{
-            top: 0px;
-            transform: rotate(100deg);
+            top: 0vh;
         }
     }
 </style>
