@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animação Foguete</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    #ceu {
+      width: 100%;
+      height: 100%;
+      background-color: rgb(158, 158, 255);
+      position: relative;
+    }
+
+    #chao {
+      width: 100%;
+      height: 25vh;
+      background-color: rgb(46, 18, 18);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    #nuvem {
+      position: absolute;
+      top: 10vh;  
+      left: -200px; 
+      width: 200px;
+      animation: moverNuvem 20s linear infinite;
+    }
+
+    #nuvem img {
+      width: 100%;
+    }
+
+    #foguete {
+      position: absolute;
+      bottom: 25vh; 
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px; 
+      animation: subir 5s linear infinite;
+    }
+
+    #foguete img {
+      width: 100%;
+    }
+
+    @keyframes subir {
+      0% { bottom: 25vh; }
+      100% { bottom: 120vh; }
+    }
+
+    @keyframes moverNuvem {
+      0% { left: -200px; }
+      100% { left: 110%; }
+    }
+  </style>
+
+</head>
+<body>
+
+  <div id="ceu">
+    <div id="chao"></div> 
+
+    <div id="nuvem">
+      <img src="./nuvem.png" alt="nuvem"> 
+    </div>
+
+    <div id="foguete">
+      <img src="./foguete.webp" alt="Imagem de um foguete"> 
+    </div>
+
+  </div>
+
+</body>
+</html>
