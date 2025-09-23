@@ -7,38 +7,76 @@
     <style>
          * { margin: 0;
             padding: 0;
-            }
-        body { height: 100vh; width: 100vh;}
+        }
+
+        body {
+             height: 100vh; width: 100vh;
+        }
+
         #japao{
-            background-color: aqua;
-            height: 40vh; width: 50vh;
-            position: fixed;
+            background-color: rgb(255, 255, 255);
+            
         }
-        #holanda{
-            background-color: blueviolet;
-            height: 40vh; width: 50vh;
-            position: fixed;
-            top: 100%;
-            left: 50%; 
-            transform: translate(-50%);
+        #circulo{
+            width: 100px;
+            height: 100px;
+            border-radius: 1000ch;
+            background-color: red;
+            position:fixed; left: 10%; top: 10%;
+            transform: translate(-10%, -10%);
         }
+        
         #italia{
-            background-color: brown;
-            height: 40vh; width: 50vh;
-            position: fixed;
-            top: 100%;
+            background-color: rgb(255, 255, 255);
+            
+        }
+
+        .linhas{
+            height: 33%;
+            width: 100% ;
+        }
+        #linha1{
+            background-color: rgb(255, 0, 0);
+        }
+        #linha2{
+            background-color: rgb(255, 255, 255);
+        }
+        #linha3{
+            background-color: rgb(15, 83, 184);
+        }
+        .colunas{
+            height: 100%;
+            width: 33%;
+        }
+        #coluna1{
+            background-color: rgb(11, 114, 19);
+        }
+        #coluna2{
+            background-color: white;
+        }
+        #coluna3{
+            background-color: rgb(230, 62, 20);
+        }
+
+        .bandeira{
+            height: 25vh;
+            width: 33vh;
         }
     </style>
 </head>
 <body>
-    <div id="japao">
-
+    <div id="japao" class="bandeira">
+        <div id="circulo"></div>
     </div>
-    <div id="holanda">
-
+    <div id="holanda" class="bandeira">
+        <div id="linha1" class="linhas"></div>
+        <div id="linha2" class="linhas"></div>
+        <div id="linha3" class="linhas"></div>
     </div>
-    <div id="italia">
-
+    <div id="italia" class="bandeira">
+        <div id="coluna1" class="colunas"></div>
+        <div id="coluna2" class="colunas"></div>
+        <div id="coluna3" class="colunas"></div>
     </div>
 </body>
 </html>
