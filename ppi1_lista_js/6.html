@@ -10,24 +10,37 @@
     <p></p>
     <span>Número final:</span> <input type="number" id="final">
     <p></p>
-    <button onclick="">Verificar</button>
-
+    <button onclick="verificar()">Verificar</button>
+    <p></p>
+    <h3>Primos neste intervalo de tempo</h3>
     <p id="resultadoPrimos"></p>
-
+    
     <script>
 
-         const inicial = document.getElementById("inicial").value;
-        const final = document.getElementById("final").value;
+        function ehPrimo(numero){
+            if (numero<1) {return false;}
 
+            for(let i=2; i<=numero; i=i+1){
+                if(numero%i==0){
+                    return false;
+                }
+            }
+            return true;
+            
+        }
 
+        function verificar(){
+            const inicial = parseInt(document.getElementById("inicial").value);
+            const final = parseInt(document.getElementById("final").value);
+            const resultadoPrimos = document.getElementById("resultadoPrimos").value;
 
-
-
-
-        function ehPrimo(n){ 
-
-       
-
+            for (let i=inicial; i<=final; i=i+1) {
+                if(ehPrimo(i)){
+                    let p = document.createElement("p");
+                    p.innerHTML = resultadoPrimos;
+                    resultadoPrimos.appendChild(p);
+                }
+            }
         }
     </script>
 

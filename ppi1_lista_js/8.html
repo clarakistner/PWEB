@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cor de fundo</title>
+</head>
+<body>
+    <div id="fundo">
+        <button id="alterar()">Alterar Cor de Fundo</button>
+    </div>
+     <script>
+        function alterar(){
+            const cor = Math.floor(Math.random * 256).toString(16);
+            document.getElementById("fundo").style.backgroundColor = cor;
+        }
+
+     </script>   
+</body>
+</html>
