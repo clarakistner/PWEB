@@ -1,6 +1,7 @@
 <?php
-        require_once"Conexao.php";
+        require_once "Conexao.php";
         $usuarios = select_usuarios();
+        require_once ("menu.php");
 ?>
 
 <link rel="stylesheet" href="ListaCadastro.css">
@@ -21,6 +22,7 @@
             <td><?php echo htmlspecialchars($usuario['email'])?></td>
             <td><?php echo htmlspecialchars($usuario['telefone'])?></td>
             <td><?php echo htmlspecialchars($usuario['dataNascimento'])?></td>
+            <td> <a href=EditarCadastro.php?id=<?php echo htmlspecialchars($usuario['id'])?> > Editar </a></td>
         </tr>
         <?php endforeach; ?>
     </table>
