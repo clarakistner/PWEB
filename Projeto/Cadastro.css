@@ -7,7 +7,7 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(107, 128, 104);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -24,9 +24,34 @@ header{
 }
 
 .container{
-    background-color: aliceblue;
+    background-color: rgb(107, 128, 104);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
+#button{
+    display: block;
+    margin: 30px auto;
+    height: 27px;
+    width: 70px;
+    border-radius: 3px;
+    border: 1px solid gray;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#button:hover{
+    background-color: gray;
+    color: white;
+}
+
+.input{
+    padding: 10px;
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid gray;
+}
+

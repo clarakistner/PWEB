@@ -3,7 +3,7 @@
 function connecta_bd(){
         $servername = "localhost:3306";
         $username = "root";
-        $password = "aluno";
+        $password = "NovaSenha!2025";
         $dbname = "projetoweb";
 
         return new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -34,17 +34,15 @@ function delete_usuario($id){
 //delete_usuario("2");
 //CORRETO
 
-function update_usuario($id, $email, $nome, $senha, $telefone, $dataNascimento){
+function update_usuario($id, $email, $nome, $telefone){
     $con = connecta_bd();
     $stmt = $con->prepare("UPDATE usuarios
-                            SET email = :email, nome = :nome, senha = :senha, telefone = :telefone, dataNascimento = :dataNascimento
+                            SET email = :email, nome = :nome, telefone = :telefone
                             WHERE id = :id");
     $stmt ->bindParam(':id', $id);                       
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':nome', $nome);
-    $stmt->bindParam(':senha', $senha);
     $stmt->bindParam(':telefone', $telefone);
-    $stmt->bindParam(':dataNascimento', $dataNascimento);
     return $stmt->execute();
 }
 //update_usuario("1", "clarabkistner@gmail.com", "Clara Bianca Kistner", "clarakistner", "99953-1753", "2008-02-15");
@@ -67,7 +65,7 @@ function select_usuarios(){
     $stmt ->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
-
+//CORRETO
 
 
 ?>
