@@ -1,10 +1,22 @@
 <?php
-require_once("Conexao.php");
+require_once ("Conexao.php");
 $usuarios = select_usuarios();
-require_once ("menu.php");
 ?>
 
-<link rel="stylesheet" href="ListaCadastro.css?v=1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de usuários</title>
+    
+    <link rel="stylesheet" href="ListaCadastro.css">
+</head>
+
+<body>    
+    
+<?php require_once ("menu.php"); ?>
+
 <div class="container">
     <h1>Lista de usuários</h1>
     <table border="1">
@@ -14,6 +26,8 @@ require_once ("menu.php");
             <th>Email</th>
             <th>Telefone</th>
             <th>Data Nascimento</th>
+            <th>Editar Cadastro</th>
+            <th>Excluir Cadastro</th>
         </tr>
         <?php foreach ($usuarios as $usuario): ?>
             <tr>
@@ -32,3 +46,4 @@ require_once ("menu.php");
         <?php endforeach; ?>
     </table>
 </div>
+</body>

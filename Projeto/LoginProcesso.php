@@ -4,8 +4,8 @@ session_start();
 require_once("Conexao.php");
 $usuarios = select_usuarios();
 
-if (!isset($_POST['email']) || !isset($_POST['senha'])) {
-    header("Location: Login.php?error=faltando_dados_SEU_CABAÇO");
+if (empty($_POST['email']) || empty($_POST['senha'])) {
+    header("Location: Login.php?error=faltando_dados&email=" . $_POST['email'] . "&senha=" . $_POST['senha']);
     exit;
 }
 
@@ -33,10 +33,8 @@ foreach ($usuarios as $u):
 endforeach;
 
 if ($achou == false) {
-    header("Location: Login.php?error=Dados_incorretos_seu_cabaço");
+    header("Location: Login.php?error=Dados_incorretos&email=" . $email."&senha=".$senha);
     exit;
 }
-
-//select_usuario($_POST['email'], $_POST['senha']);
 
 ?>

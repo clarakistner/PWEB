@@ -31,7 +31,7 @@ function delete_usuario($id){
     return $stmt->execute();
 }
 
-//delete_usuario("2");
+//delete_usuario("40");
 //CORRETO
 
 function update_usuario($id, $email, $nome, $telefone){
@@ -45,7 +45,7 @@ function update_usuario($id, $email, $nome, $telefone){
     $stmt->bindParam(':telefone', $telefone);
     return $stmt->execute();
 }
-//update_usuario("1", "clarabkistner@gmail.com", "Clara Bianca Kistner", "clarakistner", "99953-1753", "2008-02-15");
+//update_usuario("41", "clarabkistner@gmail.com", "Clara Bianca Kistner", "99953-1753");
 //CORRETO
 
 function select_usuario($id){
@@ -55,8 +55,8 @@ function select_usuario($id){
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
-//echo var_dump(select_usuario(1));
-//select_usuario("1");
+//echo var_dump(select_usuario(41));
+//select_usuario("41");
 //CORRETO
 
 function select_usuarios(){

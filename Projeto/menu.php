@@ -1,9 +1,24 @@
-<?php
+<nav> 
+    <a href="Login.php">Login</a>
+    <a href="Cadastro.php">Cadastro</a>
+</nav>
+<style>
+    nav {
+        background-color: gray;
+        overflow: hidden;
+    }
 
-?>
+    nav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
 
-<nav>
-    <a  href="home.php">  HOME <span> <span> </a>
-    <a  href="cadastro.php">  Cadastro <span> <span> </a>
-    <a  href="sair.php">  Sair <span> <span> </a>
-<nav>
+    nav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+</style>

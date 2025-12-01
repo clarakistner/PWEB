@@ -12,6 +12,23 @@
     <link rel="stylesheet" href="EditarCadastro.css?v=1">
 </head>
 <body>
+    <?php if (isset ($_GET['error'])) {
+        switch ($_GET['error']) {
+            case 'faltando_dados':
+                echo "<script>alert('Preencha todos os campos!');</script>";
+                break;
+            case 'nome_invalido':
+                echo "<script>alert('O nome deve ter entre 10 e 50 caracteres.');</script>";
+                break;
+            case 'email_invalido':
+                echo "<script>alert('O e-mail é inválido ou muito curto.');</script>";
+                break;
+            case 'telefone_invalido':
+                echo "<script>alert('O telefone deve ter exatamente 10 dígitos.');</script>";
+                break;
+        }
+    }
+    ?>
 <header>
         <h1>Edição de Cadastro</h1>
 </header>
