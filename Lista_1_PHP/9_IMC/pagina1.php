@@ -6,11 +6,12 @@
     <title>Página 1</title>
 </head>
 <body>
-    <form action="9_IMC/pagina2.php" method="GET"></form>
+    <form action="pagina2.php" method="GET">
     <label for="nome">Nome: </label>
     <input type="text" name="nome">
     <label for="email">E-mail: </label>
     <input type="text" name="email">
     <input type="submit" value="Próximo">
+    </form>
 </body>
 </html>

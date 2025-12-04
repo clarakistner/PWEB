@@ -22,8 +22,8 @@
     echo "<h1>Resultado do Cálculo de IMC</h1>";
     echo "<p>Nome: " . htmlspecialchars($nome) . "</p>";    
     echo "<p>Email: " . htmlspecialchars($email) . "</p>"; 
-    echo "<p>Peso: ". number_format($peso,2) ."</p>";
-    echo "<p>Altura: ". number_format($altura,2) ."</p>";
-     echo "<p>IMC: " . number_format($IMC, 2) . "</p>";
+    echo "<p>Peso: ". number_format($peso,1) ."kg</p>";
+    echo "<p>Altura: ". number_format($altura,2) ."cm</p>";
+    echo "<p>IMC: " . number_format($IMC, 2) . "</p>";
     echo "<p>Classificação: " . $classificacao . "</p>";   
 ?>
