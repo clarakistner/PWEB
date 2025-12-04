@@ -6,44 +6,46 @@
     <title>Primos</title>
 </head>
 <body>
-    <span>Número inicial:</span> <input type="number" id="inicial">
-    <p></p>
-    <span>Número final:</span> <input type="number" id="final">
-    <p></p>
-    <button onclick="verificar()">Verificar</button>
-    <p></p>
-    <h3>Primos neste intervalo de tempo</h3>
-    <p id="resultadoPrimos"></p>
+    <span>Número inicial:</span> 
+    <input type="number" id="inicial"><br></br>
+
+    <span>Número final:</span> 
+    <input type="number" id="final"><br></br>
+
+    <button onclick="verificar()">Verificar</button><br></br>
+
+    <h3>Primos neste intervalo</h3>
+    <div id="resultadoPrimos"></div>
     
     <script>
 
-        function ehPrimo(numero){
-            if (numero<1) {return false;}
+        function ehPrimo(n){
+            if (n < 2) return false;
 
-            for(let i=2; i<=numero; i=i+1){
-                if(numero%i==0){
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) {
                     return false;
                 }
             }
             return true;
-            
         }
 
         function verificar(){
             const inicial = parseInt(document.getElementById("inicial").value);
             const final = parseInt(document.getElementById("final").value);
-            const resultadoPrimos = document.getElementById("resultadoPrimos").value;
+            const resultadoPrimos = document.getElementById("resultadoPrimos");
 
-            for (let i=inicial; i<=final; i=i+1) {
-                if(ehPrimo(i)){
+            resultadoPrimos.innerHTML = "";
+
+            for (let i = inicial; i <= final; i++) {
+                if (ehPrimo(i)) {
                     let p = document.createElement("p");
-                    p.innerHTML = resultadoPrimos;
+                    p.innerHTML = i;    
                     resultadoPrimos.appendChild(p);
                 }
             }
         }
     </script>
-
 
 </body>
 </html>
